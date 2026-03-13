@@ -13,6 +13,11 @@ pipeline{
     }
 
     stages{
+        stage('build jar') {
+            steps {
+                bat 'mvn clean package -DskipTests'
+            }
+        }
 
         stage('build docker image') {
             steps{
