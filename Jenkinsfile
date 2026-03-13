@@ -13,11 +13,6 @@ pipeline{
     }
 
     stages{
-        stage('checkout'){
-            steps{
-                git url: 'https://github.com/Aleksi246/w7.git', credentialsId: 'github-pat'
-            }
-        }
 
         stage('build docker image') {
             steps{
